@@ -1,0 +1,105 @@
+/* Modern Background and Reset */
+body { 
+    font-family: Georgia, sans-serif; 
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+    background: linear-gradient(270deg, 
+        #667eea,   /* Blue */
+        #764ba2,   /* Purple */
+        #00c9a7,   /* Green/Teal */
+        #ff6a88,   /* Pink */
+        #00c9ff    /* Sky Blue */
+    );
+
+    background-size: 800% 800%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Background Animation */
+@keyframes gradientBG {
+
+    0%{
+        background-position: 0% 50%;
+    }
+
+    25%{
+        background-position: 50% 100%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    75%{
+        background-position: 50% 0%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+/* Card Styling with Glassmorphism touch */
+.card { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+    width: 100%;
+    max-width: 500px; 
+    margin-bottom: 25px; 
+}
+
+h2 { color: #4834d4; text-align: center; margin-bottom: 20px; font-weight: 700; }
+
+/* Dashboard Grid - Colorful Stats */
+.dashboard-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 15px; 
+    width: 100%;
+    max-width: 600px; 
+    margin-bottom: 25px; 
+}
+
+.stat-card { 
+    padding: 20px; 
+    border-radius: 15px; 
+    text-align: center; 
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Specific colors for Stats */
+.stat-income { background: linear-gradient(to bottom right, #2ecc71, #27ae60); }
+.stat-expense { background: linear-gradient(to bottom right, #e74c3c, #c0392b); }
+.stat-balance { background: linear-gradient(to bottom right, #3498db, #2980b9); }
+
+.stat-card h4 { margin: 0; font-size: 0.9rem; opacity: 0.9; }
+.stat-card h3 { margin: 5px 0 0 0; font-size: 1.2rem; }
+
+/* Form and Inputs */
+label { display: block; margin-top: 15px; color: #333; font-weight: 600; }
+input, select { 
+    width: 100%; padding: 12px; margin-top: 8px; 
+    border: 2px solid #eee; border-radius: 10px; 
+    box-sizing: border-box; transition: 0.3s;
+}
+input:focus { border-color: #667eea; outline: none; }
+
+/* Buttons */
+button { 
+    width: 100%; background: #4834d4; color: white; border: none; 
+    padding: 14px; border-radius: 10px; font-weight: bold; 
+    cursor: pointer; margin-top: 20px; transition: 0.3; 
+}
+button:hover { background: #686de0; transform: translateY(-2px); }
+
+/* History Table Styling */
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th { color: #666; font-size: 0.85rem; text-transform: uppercase; padding-bottom: 10px; border-bottom: 2px solid #eee; }
+td { padding: 15px 5px; border-bottom: 1px solid #f0f0f0; font-weight: 500; }
